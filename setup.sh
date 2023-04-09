@@ -15,11 +15,13 @@ fc-cache -f
 echo Installing offline copies of suckless utilites
 sudo apt install -y build-essential libx11-dev libxinerama-dev sharutils libxft-dev \
 libx11-xcb-dev libxcb-res0-dev \
-libxrandr-dev libxpm-dev
+libxrandr-dev libxpm-dev git
 
-	mkdir ~/.config
-	cd ~/.config
-	cp -r $setup_dir/suckless ~/.config/
+	mkdir -p ~/.config/suckless
+	cd ~/.config/suckless
+	git clone https://github.com/delicious1341/dwm-flexipatch --depth=1
+	git clone https://github.com/delicious1341/dmenu-flexipatch --depth=1
+	git clone https://github.com/delicious1341/st-flexipatch --depth=1
 	for d in ~/.config/suckless/*;
 	do
 		(cd "$d" && make && sudo make install)
