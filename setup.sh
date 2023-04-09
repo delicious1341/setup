@@ -19,6 +19,7 @@ libxrandr-dev libxpm-dev git
 
 	mkdir -p ~/.config/suckless
 	cd ~/.config/suckless
+	cp -r $setup_dir/slock ./
 	git clone https://github.com/delicious1341/dwm-flexipatch --depth=1
 	git clone https://github.com/delicious1341/dmenu-flexipatch --depth=1
 	git clone https://github.com/delicious1341/st-flexipatch --depth=1
@@ -30,7 +31,7 @@ libxrandr-dev libxpm-dev git
 echo Editing .bashrc for conveniences, pip installed binaries and custom .scripts
 echo "alias grep='grep --color=auto'" >> ~/.bashrc
 echo "alias l='ls -AghoS1 --time-style=long-iso'" >> ~/.bashrc
-cp -r $setup_dir/.scripts ~/
+cp -r $setup_dir/scripts ~/.scripts
 cd ~/.scripts
 	for s in ./*;
 	do
