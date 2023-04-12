@@ -15,7 +15,7 @@ fc-cache -f
 echo Installing offline copies of suckless utilites
 sudo apt install -y build-essential libx11-dev libxinerama-dev sharutils libxft-dev \
 libx11-xcb-dev libxcb-res0-dev \
-libxrandr-dev libxpm-dev git
+libxrandr-dev libxpm-dev git xorg
 
 	mkdir -p ~/.config/suckless
 	cd ~/.config/suckless
