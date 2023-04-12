@@ -6,6 +6,7 @@
 
 # invoke global X session script
 #. /etc/X11/Xsession
+xrandr --output Virtual-1 --mode 1920x1080 &
 ~/.scripts/wallpapers.sh &
 ~/.scripts/picomstart.sh &
 exec dwm
