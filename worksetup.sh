@@ -8,6 +8,9 @@ setup_dir=$(pwd)
 
 sudo apt install -y vim-gtk zathura texlive-full xournal sxiv mpv
 cp -r $setup_dir/.vimrc ~/
+mkdir -p ~/.config/zathura
+cp -r $setup_dir/zathurarc ~/.config/zathura/
+
 
 pip3 install --user yt-dlp
 
