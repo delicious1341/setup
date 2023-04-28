@@ -40,7 +40,7 @@ cd ~/.scripts
 echo 'export PATH="${PATH}:${HOME}/.local/bin/:${HOME}/.scripts/"' >> ~/.bashrc
 
 echo Installing pywal
-sudo apt install -y python3-pip imagemagick feh
+sudo apt install -y python3-pip imagemagick feh xdotool
 pip3 install --user pywal
 ~/.local/bin/wal
 cp -r $setup_dir/colors.Xresources ~/.config/wal/templates/
