@@ -11,6 +11,8 @@ setup_dir=$(pwd)
 sudo apt install -y vim-gtk zathura texlive-full xournal sxiv mpv libreoffice
 cp -r $setup_dir/.vimrc ~/
 sudo cp -r $setup_dir/vim.desktop /usr/share/applications/
+mkdir -p ~/.vim
+cp -r $setup_dir/UltiSnips ~/.vim/
 mkdir -p ~/.config/zathura
 cp -r $setup_dir/zathurarc ~/.config/zathura/
 cp -r $setup_dir/mimeapps.list ~/.config/
