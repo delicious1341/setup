@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# Script name: work_setup
 # run this script from the directory containing setup files
 
 
@@ -10,6 +12,6 @@ sudo apt install -y vim-gtk zathura texlive-full xournal sxiv mpv libreoffice
 cp -r $setup_dir/.vimrc ~/
 mkdir -p ~/.config/zathura
 cp -r $setup_dir/zathurarc ~/.config/zathura/
-
+cp -r $setup_dir/mimeapps.list ~/.config/
 
 pip3 install --user yt-dlp 
