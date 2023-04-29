@@ -1,15 +1,15 @@
-snippet article
-@article{ResearchPaper,
-	author		= "\href{run:./sources/}{+}",
+snippet article "reference research papers" Ab
+@article{$1,
+	author		= "\href{run:./sources/$1}{${2:+}}",
 	editor		= "",
 	annotator	= "",
 	translator	= "",
-	title		= "+",
+	title		= "${3:+}",
 	titleaddon	= "",
 	journalsubtitle	= "",
-	journaltitle	= "+",
-	date		= "+-",
-	year		= "+-",
+	journaltitle	= "${4:+}",
+	date		= "$6",
+	year		= "$7",
 	month		= "",
 	issue		= "",
 	number		= "",
@@ -23,5 +23,5 @@ snippet article
 	publisher	= "",
 	pages		= "",
 }
-
+$5
 endsnippet
