@@ -8,11 +8,19 @@ endif
 call plug#begin('~/.vim/plugged')
   Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
   Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+  Plug 'SirVer/ultisnips'
   Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 call plug#end()
 
 " use zathura for live preview with vim-latex-live-preview plugin "
 let g:livepreview_previewer = 'zathura '
+
+" configuration for ultisnips plugin "
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
 
 " enable line and relative numbers "
 set number
