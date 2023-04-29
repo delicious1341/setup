@@ -6,16 +6,10 @@ sudo apt update && sudo apt upgrade -y
 
 setup_dir=$(pwd)
 
-sudo apt install -y vim-gtk zathura texlive-full xournal sxiv mpv
+sudo apt install -y vim-gtk zathura texlive-full xournal sxiv mpv libreoffice
 cp -r $setup_dir/.vimrc ~/
 mkdir -p ~/.config/zathura
 cp -r $setup_dir/zathurarc ~/.config/zathura/
 
 
-pip3 install --user yt-dlp
-
-xdg-mime default sxiv.desktop image/jpeg
-xdg-mime default sxiv.desktop image/png
-xdg-mime default sxiv.desktop image/webp
-xdg-mime default librewolf.desktop text/html
-xdg-mime default librewolf.desktop application/pdf
+pip3 install --user yt-dlp 
