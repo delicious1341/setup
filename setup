@@ -9,9 +9,7 @@ sudo apt update && sudo apt upgrade -y
 setup_dir=$(pwd)
 
 echo Installing fonts
-sudo apt install -y fontconfig
-mkdir -p ~/.local/share
-cp -r $setup_dir/fonts ~/.local/share/
+sudo apt install -y fontconfig fonts-font-awesome fonts-jetbrains-mono
 fc-cache -f
 
 echo Installing offline copies of suckless utilites
