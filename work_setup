@@ -9,12 +9,24 @@ sudo apt update && sudo apt upgrade -y
 setup_dir=$(pwd)
 
 sudo apt install -y vim-gtk zathura texlive-full xournal sxiv mpv libreoffice
+
+echo Configure vim
 cp -r $setup_dir/.vimrc ~/
 sudo cp -r $setup_dir/vim.desktop /usr/share/applications/
+
+echo Configure UltiSnips
 mkdir -p ~/.vim
 cp -r $setup_dir/UltiSnips ~/.vim/
+
+echo Copy over a template for projects
+mkdir -p $setup_dir/template/sources
+mkdir -p ~/projects
+cp -r $setup_dir/template ~/projects/
+
+echo Configure Zathura and default applications
 mkdir -p ~/.config/zathura
 cp -r $setup_dir/zathurarc ~/.config/zathura/
 cp -r $setup_dir/mimeapps.list ~/.config/
 
+echo Download youtube-dlp
 pip3 install --user yt-dlp 
