@@ -27,6 +27,9 @@ echo Configure UltiSnips
 mkdir -p ~/.vim
 cp -r $setup_dir/UltiSnips ~/.vim/
 
+echo Running vim to install the plugins
+timeout 5s vim
+
 echo Copy over a template for projects
 mkdir -p $setup_dir/template/sources
 mkdir -p ~/projects
@@ -39,9 +42,10 @@ cp -r $setup_dir/mimeapps.list ~/.config/
 
 echo Install Qalculate!
 cp -r $setup_dir/qalculate-4.6.1-x86_64.tar.xz ~/.config/
-tar -xJf qalculate-4.6.1-x86_64.tar.xz
+tar -xJf ~/.config/qalculate-4.6.1-x86_64.tar.xz -C ~/.config
+cd ~/.config/qalculate-4.6.1
 echo Press enter for each prompt:
-~/.config/qalculate-4.6.1/install
+./install
 sudo apt install -y gnuplot gnome-themes-extra
 mkdir -p ~/.config/gtk-3.0/
 cp -r $setup_dir/settings.ini ~/.config/gtk-3.0/
@@ -53,5 +57,5 @@ echo -e "Things to do manually to complete setup: \n \
  Create keyboard shortcut for toggling exact mode on Qalculate! \n \
  Install librewolf extensions: SingleFile, Dark Reader, Vimium-FF, BibItNow! \n \
  Customise librewolf bookmarks, search engines and cookies to be saved for Notion, Github and/or Google Drive \n \
- Install vim plugins by launching vim \n"
+
  
