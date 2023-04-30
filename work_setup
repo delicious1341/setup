@@ -44,8 +44,8 @@ echo Install Qalculate!
 cp -r $setup_dir/qalculate-4.6.1-x86_64.tar.xz ~/.config/
 tar -xJf ~/.config/qalculate-4.6.1-x86_64.tar.xz -C ~/.config
 cd ~/.config/qalculate-4.6.1
-echo Press enter for each prompt:
-./install
+
+xdotool key Return Return | ./install
 sudo apt install -y gnuplot gnome-themes-extra
 mkdir -p ~/.config/gtk-3.0/
 cp -r $setup_dir/settings.ini ~/.config/gtk-3.0/
