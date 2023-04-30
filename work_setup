@@ -27,8 +27,7 @@ echo Configure UltiSnips
 mkdir -p ~/.vim
 cp -r $setup_dir/UltiSnips ~/.vim/
 
-echo Running vim to install the plugins
-timeout 5s vim
+
 
 echo Copy over a template for projects
 mkdir -p $setup_dir/template/sources
@@ -57,5 +56,5 @@ echo -e "Things to do manually to complete setup: \n \
  Create keyboard shortcut for toggling exact mode on Qalculate! \n \
  Install librewolf extensions: SingleFile, Dark Reader, Vimium-FF, BibItNow! \n \
  Customise librewolf bookmarks, search engines and cookies to be saved for Notion, Github and/or Google Drive \n \
-
+ Launch vim to install the plugins \n"
  
