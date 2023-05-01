@@ -12,10 +12,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 call plug#end()
 
-" configuration for vim-latex-live-preview plugin "
-let g:livepreview_previewer = 'zathura'
-let g:livepreview_use_biber = 1
-
 " configuration for ultisnips plugin "
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
