@@ -1,0 +1,42 @@
+#!/bin/bash
+#
+# Script name: compilatex
+# compile document.tex document from document folder
+#
+#	|
+#	|---references
+#	|	|---reference files
+#	|	|---references.bib
+#	|---document1
+#	|	|---document.tex (run script from here)
+#	|	|---document.pdf (symbolic link)
+#	|---.document1_aux
+#	|	|---auxiliary files from pdflatex and biber
+#	|	|---document.pdf
+#	|---document2
+#	|---.document2_aux
+#	|
+
+# get name of the current directory
+result=${PWD##*/}
+
+# delete and create the auxiliary latex file output directory
+rm -rf ../."$result"_aux
+mkdir ../."$result"_aux
+
+# delete current symbolic link
+rm -rf ./"$result".pdf
+
+# compile the latex file
+pdflatex -output-directory ../."$result"_aux "$result".tex
+biber --output-directory ../."$result"_aux "$result"
+pdflatex -output-directory ../."$result"_aux "$result".tex
+pdflatex -output-directory ../."$result"_aux "$result".tex
+
+# create a symbolic link for the compiled pdf file
+ln ../."$result"_aux/"$result".pdf
+
+# open compiled pdf in zathura
+open ./"$result".pdf
+
+
