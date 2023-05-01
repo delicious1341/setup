@@ -16,7 +16,6 @@ mkdir chrome
 cp $setup_dir/userChrome.css ./chrome/
 cp $setup_dir/user.js ./
 
-
 sudo apt install -y vim-gtk zathura texlive-full xournal sxiv mpv libreoffice
 
 echo Configure vim
@@ -26,8 +25,6 @@ sudo cp -r $setup_dir/vim.desktop /usr/share/applications/
 echo Configure UltiSnips
 mkdir -p ~/.vim
 cp -r $setup_dir/UltiSnips ~/.vim/
-
-
 
 echo Copy over a template for projects
 mkdir -p $setup_dir/template/sources
