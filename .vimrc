@@ -6,8 +6,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+  Plug 'SirVer/ultisnips'  
   Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
-  Plug 'SirVer/ultisnips'
   Plug 'junegunn/goyo.vim', { 'on': 'Goyo' }
 call plug#end()
 
