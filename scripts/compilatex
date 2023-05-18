@@ -29,9 +29,13 @@ rm -rf ./"$result".pdf
 
 # compile the latex file
 pdflatex -output-directory ../."$result"_aux "$result".tex
+
+if [ -e references.bib ]
+then
 biber --output-directory ../."$result"_aux "$result"
 pdflatex -output-directory ../."$result"_aux "$result".tex
 pdflatex -output-directory ../."$result"_aux "$result".tex
+fi
 
 # create a symbolic link for the compiled pdf file
 ln ../."$result"_aux/"$result".pdf
