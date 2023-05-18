@@ -1,1 +1,21 @@
+\documentclass[a4paper]{article}
 
+%\usepackage{graphicx}
+
+\usepackage[backend=biber,style=numeric,sorting=none,backref=true]{biblatex}
+\addbibresource{../references/references.bib}
+
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\urlstyle{same}
+
+\begin{document}
+
+% This is some text! \\
+% Look at this scientific paper: \cite{reference.file}
+% \includegraphics{sources/reference.png} \\
+% \href{run:./sources/reference.jpeg}{open reference}
+
+\clearpage
+\printbibliography
+\end{document}
