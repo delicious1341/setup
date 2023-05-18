@@ -30,11 +30,11 @@ rm -rf ./"$result".pdf
 # compile the latex file
 pdflatex -output-directory ../."$result"_aux "$result".tex
 
-if [ -e references.bib ]
+if grep -Fxq "\addbibresource{../references/references.bib}" "$result".tex
 then
-biber --output-directory ../."$result"_aux "$result"
-pdflatex -output-directory ../."$result"_aux "$result".tex
-pdflatex -output-directory ../."$result"_aux "$result".tex
+  biber --output-directory ../."$result"_aux "$result"
+  pdflatex -output-directory ../."$result"_aux "$result".tex
+  pdflatex -output-directory ../."$result"_aux "$result".tex
 fi
 
 # create a symbolic link for the compiled pdf file
