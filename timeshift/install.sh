@@ -1,1 +1,1 @@
-sudo apt install -y timeshift xorg
+sudo apt install -y timeshift xorg gnome-themes-extra
