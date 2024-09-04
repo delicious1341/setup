@@ -1,6 +1,0 @@
-#!/bin/bash
-#
-# Script name: picom_start
-# start picom with the specified configuration file
-
-picom -b --config ~/.config/picom/picom.conf
